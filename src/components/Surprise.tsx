@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Gift, Sparkles, Award, Trophy } from "lucide-react";
+import { Gift, Sparkles, Award, Trophy, Play, Camera, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Surprise = () => {
   const [revealed, setRevealed] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [showGallery, setShowGallery] = useState(false);
   
   const achievements = [
     {
@@ -23,6 +25,47 @@ const Surprise = () => {
       description: "For transforming thousands of lives through mentorship"
     }
   ];
+
+  const mediaItems = [
+    {
+      type: "image",
+      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop",
+      title: "Inspiring Classroom Moments",
+      description: "Capturing the magic of learning in action"
+    },
+    {
+      type: "image", 
+      src: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=800&h=600&fit=crop",
+      title: "Student Success Stories",
+      description: "Celebrating achievements and breakthroughs"
+    },
+    {
+      type: "video",
+      src: "https://www.w3schools.com/html/mov_bbb.mp4",
+      poster: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+      title: "Teacher Appreciation Video",
+      description: "A heartfelt message from students around the world"
+    },
+    {
+      type: "image",
+      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
+      title: "Global Education Impact",
+      description: "Teachers making a difference worldwide"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % mediaItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + mediaItems.length) % mediaItems.length);
+  };
+
+  const handleReveal = () => {
+    setRevealed(true);
+    setTimeout(() => setShowGallery(true), 1000);
+  };
 
   return (
     <section id="surprise" className="py-24 bg-background relative overflow-hidden">
@@ -59,7 +102,7 @@ const Surprise = () => {
                     size="lg" 
                     variant="secondary"
                     className="px-12 py-6 text-lg font-semibold shadow-soft hover:shadow-warm transition-smooth"
-                    onClick={() => setRevealed(true)}
+                    onClick={handleReveal}
                   >
                     Open Gift
                     <Sparkles className="ml-2 h-5 w-5" />
@@ -99,7 +142,7 @@ const Surprise = () => {
                     })}
                   </div>
                   
-                  <div className="bg-primary/10 rounded-2xl p-8">
+                  <div className="bg-primary/10 rounded-2xl p-8 mb-12">
                     <h4 className="text-2xl font-bold text-foreground mb-4">
                       "Teachers: The Architects of Tomorrow"
                     </h4>
@@ -108,6 +151,100 @@ const Surprise = () => {
                       unwavering belief in every student's potential. You are truly making the world a better place.
                     </p>
                   </div>
+
+                  {/* Photo & Video Gallery */}
+                  {showGallery && (
+                    <div className="animate-fade-in-up delay-300">
+                      <div className="flex items-center justify-center mb-8">
+                        <Camera className="w-6 h-6 text-accent mr-2" />
+                        <h4 className="text-2xl font-bold text-foreground">Memory Lane</h4>
+                        <Play className="w-6 h-6 text-accent ml-2" />
+                      </div>
+                      
+                      <div className="relative max-w-4xl mx-auto">
+                        {/* Main Media Display */}
+                        <div className="relative bg-card rounded-3xl overflow-hidden shadow-elevated">
+                          <div className="aspect-video relative">
+                            {mediaItems[currentSlide].type === "image" ? (
+                              <img
+                                src={mediaItems[currentSlide].src}
+                                alt={mediaItems[currentSlide].title}
+                                className="w-full h-full object-cover animate-fade-in-right"
+                              />
+                            ) : (
+                              <video
+                                src={mediaItems[currentSlide].src}
+                                poster={mediaItems[currentSlide].poster}
+                                controls
+                                className="w-full h-full object-cover animate-fade-in-right"
+                              />
+                            )}
+                            
+                            {/* Navigation Arrows */}
+                            <Button
+                              variant="secondary"
+                              size="sm"
+                              className="absolute left-4 top-1/2 transform -translate-y-1/2 shadow-soft hover:shadow-warm transition-smooth opacity-90 hover:opacity-100"
+                              onClick={prevSlide}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                            </Button>
+                            <Button
+                              variant="secondary"
+                              size="sm"
+                              className="absolute right-4 top-1/2 transform -translate-y-1/2 shadow-soft hover:shadow-warm transition-smooth opacity-90 hover:opacity-100"
+                              onClick={nextSlide}
+                            >
+                              <ChevronRight className="w-4 h-4" />
+                            </Button>
+                          </div>
+                          
+                          {/* Media Info */}
+                          <div className="p-6 bg-gradient-subtle">
+                            <h5 className="text-xl font-semibold text-foreground mb-2 animate-fade-in-left">
+                              {mediaItems[currentSlide].title}
+                            </h5>
+                            <p className="text-muted-foreground animate-fade-in-left delay-100">
+                              {mediaItems[currentSlide].description}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Thumbnail Navigation */}
+                        <div className="flex justify-center mt-6 space-x-3">
+                          {mediaItems.map((item, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setCurrentSlide(index)}
+                              className={`relative w-20 h-12 rounded-lg overflow-hidden transition-smooth hover:scale-105 ${
+                                currentSlide === index 
+                                  ? 'ring-2 ring-accent shadow-warm' 
+                                  : 'opacity-70 hover:opacity-100'
+                              }`}
+                            >
+                              <img
+                                src={item.type === "video" ? item.poster : item.src}
+                                alt={`Slide ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                              {item.type === "video" && (
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <Play className="w-4 h-4 text-white drop-shadow-lg" />
+                                </div>
+                              )}
+                            </button>
+                          ))}
+                        </div>
+
+                        {/* Slide Counter */}
+                        <div className="text-center mt-4">
+                          <span className="text-sm text-muted-foreground">
+                            {currentSlide + 1} of {mediaItems.length}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
