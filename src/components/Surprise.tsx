@@ -51,6 +51,32 @@ const Surprise = () => {
       src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
       title: "Global Education Impact",
       description: "Teachers making a difference worldwide"
+    },
+    {
+      type: "image",
+      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      title: "Science Lab Adventures",
+      description: "Hands-on learning experiences that spark curiosity"
+    },
+    {
+      type: "video",
+      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      poster: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
+      title: "Creative Teaching Methods",
+      description: "Innovative approaches to engage every learner"
+    },
+    {
+      type: "image",
+      src: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=800&h=600&fit=crop",
+      title: "Art & Creativity Sessions",
+      description: "Nurturing artistic expression and imagination"
+    },
+    {
+      type: "video",
+      src: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
+      poster: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=800&h=600&fit=crop",
+      title: "Graduation Celebrations",
+      description: "Proud moments of achievement and success"
     }
   ];
 
