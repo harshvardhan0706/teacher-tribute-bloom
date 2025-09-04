@@ -10,13 +10,13 @@ All colors MUST be HSL.
   :root {
     /* Light Blue Theme */
     --background: 210 100% 97%;
-    --foreground: 210 30% 20%;
+    --foreground: 210 100% 8%;
 
     --card: 210 100% 99%;
-    --card-foreground: 210 40% 20%;
+    --card-foreground: 210 100% 8%;
 
     --popover: 210 100% 99%;
-    --popover-foreground: 210 40% 20%;
+    --popover-foreground: 210 100% 8%;
 
     /* Bright blue primary */
     --primary: 210 90% 55%;
@@ -24,10 +24,10 @@ All colors MUST be HSL.
 
     /* Soft pastel blue secondary */
     --secondary: 200 70% 80%;
-    --secondary-foreground: 210 30% 20%;
+    --secondary-foreground: 210 100% 8%;
 
     --muted: 200 40% 90%;
-    --muted-foreground: 210 20% 40%;
+    --muted-foreground: 210 50% 25%;
 
     /* Purple accent */
     --accent: 280 70% 65%;
