@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Educational color palette */
-    --background: 43 47% 97%;
-    --foreground: 220 15% 20%;
+    /* Light Blue Theme */
+    --background: 210 100% 97%;
+    --foreground: 210 30% 20%;
 
-    --card: 43 47% 98%;
-    --card-foreground: 220 15% 20%;
+    --card: 210 100% 99%;
+    --card-foreground: 210 40% 20%;
 
-    --popover: 43 47% 98%;
-    --popover-foreground: 220 15% 20%;
+    --popover: 210 100% 99%;
+    --popover-foreground: 210 40% 20%;
 
-    /* Deep educational blue - wisdom & trust */
-    --primary: 215 75% 35%;
-    --primary-foreground: 43 47% 97%;
+    /* Bright blue primary */
+    --primary: 210 90% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm appreciation gold */
-    --secondary: 45 90% 65%;
-    --secondary-foreground: 220 15% 20%;
+    /* Soft pastel blue secondary */
+    --secondary: 200 70% 80%;
+    --secondary-foreground: 210 30% 20%;
 
-    --muted: 43 30% 92%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 200 40% 90%;
+    --muted-foreground: 210 20% 40%;
 
-    /* Inspiring coral accent */
-    --accent: 15 85% 70%;
-    --accent-foreground: 220 15% 20%;
+    /* Purple accent */
+    --accent: 280 70% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 43 47% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 43 30% 88%;
-    --input: 43 30% 88%;
-    --ring: 215 75% 35%;
+    --border: 210 30% 85%;
+    --input: 210 30% 85%;
+    --ring: 210 90% 55%;
 
     /* Beautiful gradients */
-    --gradient-primary: 215 75% 35%, 220 70% 45%;
-    --gradient-warm: 45 90% 65%, 15 85% 70%;
-    --gradient-hero: 215 75% 35%, 45 90% 65%, 15 85% 70%;
-    --gradient-subtle: 43 47% 97%, 43 30% 92%;
+    --gradient-primary: 210 90% 55%, 210 70% 65%;
+    --gradient-warm: 280 70% 65%, 210 90% 55%;
+    --gradient-hero: 210 90% 55%, 200 70% 80%;
+    --gradient-subtle: 210 80% 98%, 210 100% 97%;
 
     /* Elegant shadows */
-    --shadow-soft: 0 2px 20px -8px hsl(215 75% 35% / 0.2);
-    --shadow-warm: 0 8px 32px -8px hsl(45 90% 65% / 0.3);
-    --shadow-elevated: 0 16px 40px -12px hsl(220 15% 20% / 0.15);
+    --shadow-soft: 0 2px 20px -8px hsl(210 60% 50% / 0.1);
+    --shadow-warm: 0 8px 32px -8px hsl(210 60% 50% / 0.2);
+    --shadow-elevated: 0 16px 40px -12px hsl(210 60% 40% / 0.2);
 
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
