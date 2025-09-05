@@ -48,7 +48,7 @@ const About = () => {
               >
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-gradient-warm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-warm">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-card-foreground" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">
                     {impact.title}
