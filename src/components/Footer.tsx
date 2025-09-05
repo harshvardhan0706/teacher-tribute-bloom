@@ -15,12 +15,12 @@ const Footer = () => {
           
           <div className="border-t border-primary-foreground/20 pt-8">
             <div className="flex items-center justify-center mb-4">
-              <span className="text-primary-foreground/80">Made with</span>
+              <span className="text-primary-foreground/80">Made by harsh </span>
               <Heart className="w-5 h-5 text-accent mx-2 animate-pulse" />
               <span className="text-primary-foreground/80">for educators everywhere</span>
             </div>
             <p className="text-primary-foreground/60 text-sm">
-              © 2024 Teachers' Day Tribute • Celebrating Education Excellence
+              Teachers' Day Tribute • Celebrating Education Excellence
             </p>
           </div>
         </div>

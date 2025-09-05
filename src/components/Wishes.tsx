@@ -4,39 +4,39 @@ import { Star, Quote } from "lucide-react";
 const Wishes = () => {
   const wishes = [
     {
-      name: "Sarah Chen",
-      role: "Former Student",
-      message: "Mrs. Johnson believed in me when I didn't believe in myself. Her encouragement led me to pursue engineering, and now I'm designing sustainable solutions for the future.",
+      name: "Harsh",
+      // role: "Former Student",
+      message: "Wishing you a very Happy Teachers Day! 🌸 On behalf of all of us, we sincerely thank you for your constant guidance, support, and inspiration. We feel truly fortunate to have you as our mentor.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      role: "Parent",
-      message: "Mr. Thompson transformed my daughter's relationship with mathematics. His patience and creative teaching methods turned her struggles into genuine love for learning.",
+      name: "Sweety",
+      // role: "",
+      message: "Dear Teacher, on this special day, I want to thank you not just for teaching lessons from tutorials and MDN, but also for teaching lessons of life with real life examples. You inspire me to do better every day. Your dedication, patience, and wisdom have made a big difference in my life. Wishing you a very Happy Teachers Day!.",
       rating: 5
     },
     {
-      name: "Emily Davis",
-      role: "Graduate Student",
-      message: "Professor Williams didn't just teach literature; she taught me to think critically, to question, and to find my voice. Her impact extends far beyond the classroom.",
+      name: "Alok",
+      // role: "Graduate Student",
+      message: "“Happy Teachers’ Day, Sir! 🙌 From all of us – thank you for teaching us, scolding us, motivating us, and still tolerating us 😜. We’re lucky to have you guiding us (even when we drive you crazy).",
       rating: 5
     },
     {
-      name: "David Kim",
-      role: "Young Professional",
-      message: "Coach Martinez taught me that excellence isn't about being perfect—it's about giving your best effort every single day. That lesson guides me in everything I do.",
+      name: "Abhinav",
+      // role: "Young Professional",
+      message: "Happy teachers day sir aypka favourite student ka side Se,Kya matlab mai favourite nhi hu mai nhi maanta ya😂😂.",
       rating: 5
     },
     {
-      name: "Jessica Brown",
-      role: "Artist",
-      message: "Ms. Garcia saw the artist in me before I did. Her art classes weren't just lessons; they were journeys of self-discovery that shaped who I am today.",
+      name: "Aastha",
+      // role: "Artist",
+      message: "Wishing you a very Happy Teacher’s Day! Your endless support, guidance, and encouragement have always inspired me to do better. Thank you for being my mentor, role model, and constant source of motivation. I feel truly blessed to have a teacher like you in my life.",
       rating: 5
     },
     {
-      name: "Robert Taylor",
-      role: "Community Leader",
-      message: "Dr. Smith taught me that knowledge without compassion is incomplete. Her example of service inspired me to give back to my community every day.",
+      name: "Julybatch students",
+      // role: "Community Leader",
+      message: "Happy Teachers’ Day🎉 Lots of love and respect from the entire July batch 🙏. Thank you for your patience, guidance, and all the gyaan you share (even when half of us are sleepy in class 😅). We truly appreciate you and feel lucky to learn from you.",
       rating: 5
     }
   ];
@@ -78,7 +78,7 @@ const Wishes = () => {
                     {wish.name}
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    {wish.role}
+                    {/* {wish.role} */}
                   </p>
                 </div>
               </CardContent>
