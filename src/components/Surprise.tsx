@@ -6,57 +6,32 @@ const Surprise = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const mediaItems = [
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop",
-      title: "Inspiring Classroom Moments",
-      description: "Capturing the magic of learning in action"
-    },
-    {
-      type: "image", 
-      src: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=800&h=600&fit=crop",
-      title: "Student Success Stories",
-      description: "Celebrating achievements and breakthroughs"
-    },
-    {
+     {
       type: "video",
-      src: "https://www.w3schools.com/html/mov_bbb.mp4",
-      poster: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+      src: "public/IMG_5303.MP4",
+      poster: "public/smiling-volunteer-with-box-of-food-donate-at-crisis-center-png.webp",
+      title: "Teacher Appreciation Video",
+      description: "A heartfelt message from students around the world"
+    },
+      {
+      type: "video",
+      src: "public/Happy Teachers day.mp4",
+       poster: "public/images (8).jpg",
       title: "Teacher Appreciation Video",
       description: "A heartfelt message from students around the world"
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
-      title: "Global Education Impact",
-      description: "Teachers making a difference worldwide"
+      src: "public/lookbook.png",
+      title: "Inspiring Classroom Moments",
+      description: "Capturing the magic of learning in action"
     },
     {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-      title: "Science Lab Adventures",
-      description: "Hands-on learning experiences that spark curiosity"
+      type: "image", 
+      src: "public/lookbook 2.png",
+      title: "Student Success Stories",
+      description: "Celebrating achievements and breakthroughs"
     },
-    {
-      type: "video",
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-      poster: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
-      title: "Creative Teaching Methods",
-      description: "Innovative approaches to engage every learner"
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=800&h=600&fit=crop",
-      title: "Art & Creativity Sessions",
-      description: "Nurturing artistic expression and imagination"
-    },
-    {
-      type: "video",
-      src: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
-      poster: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=800&h=600&fit=crop",
-      title: "Graduation Celebrations",
-      description: "Proud moments of achievement and success"
-    }
   ];
 
   const nextSlide = () => {
